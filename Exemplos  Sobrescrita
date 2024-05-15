@@ -1,0 +1,37 @@
+public class Animal {
+    
+    public void fazerSom() {
+        System.out.println("Animal fazendo som genérico.");
+    }
+}
+
+public class Cachorro extends Animal {
+    
+    
+    @Override
+    public void fazerSom() {
+        System.out.println("Cachorro latindo: Au Au!");
+    }
+}
+
+public class Gato extends Animal {
+    
+  
+    @Override
+    public void fazerSom() {
+        System.out.println("Gato miando: Miau!");
+    }
+}
+
+public class Teste {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.fazerSom();  
+        
+        Cachorro cachorro = new Cachorro();
+        cachorro.fazerSom(); 
+        
+        Gato gato = new Gato();
+        gato.fazerSom();
+    }
+}
